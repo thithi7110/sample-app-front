@@ -5,8 +5,9 @@ import App from '../../src/App'
 describe('App.cy.ts', () => {
   beforeEach(() => {
     // スコープ内の各テストごとに実行前に実行
+    let url = import.meta.env.VITE_BASE_URL + 'zipcode?zipcode*'
 
-    cy.intercept('GET', 'http://localhost:8000/zipcode?zipcode*', {
+    cy.intercept('GET', url, {
         statusCode: 200,
         body: {
             "message": null,
