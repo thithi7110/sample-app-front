@@ -39,3 +39,11 @@
 .read-the-docs {
   color: #888;
 }
+
+$custom-back-color:antiquewhite;
+.CustomComponentA{
+  background-color: $custom-back-color;
+}
+.CustomComponentC{
+  color:aqua
+}
