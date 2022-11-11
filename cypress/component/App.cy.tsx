@@ -34,7 +34,7 @@ describe('App.cy.ts', () => {
     cy.mount(<App />)
 
     cy.get('[data-cy=zipcode]').type('9000024').then(() => {
-      cy.get('[data-cy=getaddressbutton]').click().then(() => {
+      cy.get('[data-cy=getaddressbutton]').click().wait(500).then(() => {
 
         cy.get('[data-cy=address]').should('have.text', "沖縄県中頭郡北中城村大城");
       })
