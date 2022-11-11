@@ -6,7 +6,8 @@ import App from '../../src/App'
 describe('App.cy.ts', () => {
   beforeEach(() => {
     // スコープ内の各テストごとに実行前に実行
-    let url = Cypress.env('baseURL') + '/zipcode?zipcode*'
+    // let url = Cypress.env('baseURL') + '/zipcode?zipcode*'
+    let url = '**/zipcode?zipcode*'
     // let url = 'http://localhost:5173/zipcode?zipcode*'
 
     cy.intercept('GET', url, {
