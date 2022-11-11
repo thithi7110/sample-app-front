@@ -19,6 +19,6 @@ jobs:
       - name: Cypress run --component
         uses: cypress-io/github-action@v4.2.0
         with:
-          wait-on: 'http://localhost:5173'
+          start: npm run dev
           install: false
           component: true
