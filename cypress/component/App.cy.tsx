@@ -6,11 +6,11 @@ import App from '../../src/App'
 describe('App.cy.ts', () => {
   beforeEach(() => {
     // スコープ内の各テストごとに実行前に実行
-    let url = Cypress.env('baseURL') + '/zipcode?zipcode*'
-    // let url = '**/zipcode?zipcode*'
+    // let url = Cypress.env('baseURL') + '/zipcode?zipcode*'
+    let url = '**/zipcode?zipcode*'
     // let url = 'http://localhost:5173/zipcode?zipcode*'
-    cy.intercept('/dummy').as('dummy')
-
+    // let url = 'https://yvm8vrvque.execute-api.us-east-1.amazonaws.com/prod/zipcode?zipcode*'
+    
     cy.intercept('GET', url, {
         statusCode: 200,
         body: {

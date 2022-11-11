@@ -18,6 +18,8 @@ jobs:
         run: npm install
       - name: Cypress run --component
         uses: cypress-io/github-action@v4.2.0
+        env: 
+          VITE_BASE_URL: http://localhost:5173
         with:
           component: true
           browser: chrome
