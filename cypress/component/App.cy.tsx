@@ -9,6 +9,7 @@ describe('App.cy.ts', () => {
     let url = Cypress.env('baseURL') + '/zipcode?zipcode*'
     // let url = '**/zipcode?zipcode*'
     // let url = 'http://localhost:5173/zipcode?zipcode*'
+    cy.intercept('/dummy').as('dummy')
 
     cy.intercept('GET', url, {
         statusCode: 200,
